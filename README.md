@@ -10,6 +10,7 @@ Aplikasi ini tidak hanya menggunakan file environment .env tetapi juga menggunak
 
 - Menggabungkan kedua challenge minihackathon:
 > Challenge 1: Mencegah bypass login
+
 > Challenge 2: Mencegah merchant untuk mencairkan uang sebelum pembeli menerima barang
 
 - Bisa menggunakan database asli untuk daftar item dan menyimpan data
