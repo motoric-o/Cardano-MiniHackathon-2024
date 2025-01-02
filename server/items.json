@@ -1,0 +1,40 @@
+[
+    {
+        "name": "Cardano Workshop Special Mug",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae quod voluptate non enim ducimus commodi praesentium, veniam quos",
+        "price": 10,
+        "type": "merch"
+    },
+    {
+        "name": "Membership Token - Silver",
+        "description": "An access token for silver membership",
+        "price": 50,
+        "type": "nft",
+        "policyId": "9626d9312862662c89a27ee2340c18c875d1aa0e92b8aa6e760e3ceb",
+        "assetId": "73696c766572"
+    },
+    {
+        "name": "Membership Token - Gold",
+        "description": "An access token for gold membership",
+        "price": 100,
+        "type": "nft",
+        "policyId": "9626d9312862662c89a27ee2340c18c875d1aa0e92b8aa6e760e3ceb",
+        "assetId": "676f6c64"
+    },
+    {
+        "name": "Membership Token - Platinum",
+        "description": "An access token for platinum membership",
+        "price": 200,
+        "type": "nft",
+        "policyId": "9626d9312862662c89a27ee2340c18c875d1aa0e92b8aa6e760e3ceb",
+        "assetId": "706c6174696e756d"
+    },
+    {
+        "name": "Shaggy",
+        "description": "A meme image",
+        "price": 10,
+        "type": "nft",
+        "policyId": "f2d022f9488bf0f4ef11176a3f6f3693466acb6ce7f2d760e98b5212",
+        "assetId": "73686167"
+    }
+]

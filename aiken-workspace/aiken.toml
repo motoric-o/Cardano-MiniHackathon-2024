@@ -1,13 +1,13 @@
-name = "aiken-lang/aiken-hello-world"
+name = "aiken-lang/web3"
 version = "0.0.0"
-compiler = "v1.1.4"
+compiler = "v1.1.9"
 plutus = "v3"
 license = "Apache-2.0"
 description = "Aiken contracts for project 'aiken-lang/aiken-hello-world'"
 
 [repository]
 user = "aiken-lang"
-project = "aiken-hello-world"
+project = "web3"
 platform = "github"
 
 [[dependencies]]

@@ -23,7 +23,7 @@ validator hello_world {
   spend(
     datum: Option<Datum>,
     redeemer: Redeemer,
-    _own_ref: OutputReference,
+    _oref: OutputReference,
     tx: Transaction,
   ) {
     // Menampilkan isi dari redeemer di terminal ketika sesi testing
@@ -34,13 +34,12 @@ validator hello_world {
     // Jika parameter datum kosong maka hasilnya None 
     // Transaksi dibatalkan jika hasilnya None
     expect Some(Datum { owner }) = datum
-
     // Bernilai true jika pesan atau isi redeemer adalah "17925"
-    let reference_number = redeemer.msg == "17925"
+    let reference_number = redeemer.msg == "received"
 
     // Bernilai true jika menggunakan Pub Key Hash (di datum) wallet address penerima dana
     let must_be_sign = list.has(tx.extra_signatories, owner)
-
+    
     // Operator ? digunakan untuk menampilkan dan menunjukan suatu parameter yang bernilai false
     reference_number? && must_be_sign?
   }
@@ -83,7 +82,7 @@ test scenario_2() {
 test scenario_3() {
   let datum =
     Datum { owner: #"00000000000000000000000000000000000000000000000000000000" }
-  let redeemer = Redeemer { msg: "17925" }
+  let redeemer = Redeemer { msg: "received" }
   let placeholder_utxo = OutputReference { transaction_id: "", output_index: 0 }
   hello_world.spend(
     Some(datum),

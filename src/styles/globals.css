@@ -1,3 +1,137 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --login-button-count: 1;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  transition: background-color 0.5s ease-in-out;
+  background-color: rgb(30, 30, 30);
+  border-radius: 5px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@keyframes onScroll {
+  0% {
+    scale: 0.7;
+  }
+
+  40% {
+    scale: 1;
+  }
+
+  65% {
+    scale: 1;
+  }
+
+  100% {
+    scale: 0.7;
+  }
+}
+
+@keyframes updown {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(-1.5rem, 1.5rem);
+  }
+}
+
+body {
+  background: var(--foreground-rgb);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+#bg {
+  position: fixed;
+  background: rgb(45, 45, 45);
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+}
+
+#scroll {
+  animation: onScroll linear;
+  animation-timeline: view();
+  animation-range: entry exit 150%;
+}
+
+#anim-img {
+  transform: translateY(-1.5rem);
+  animation: updown 2s ease-in-out alternate infinite;
+  rotate: -25deg;
+}
+
+#anim-img1 {
+  transform: translateY(-1.5rem);
+  animation: updown 3s ease-in-out alternate-reverse infinite;
+  rotate: 15deg;
+}
+
+#container_flex {
+  height: 11rem;
+  transition: all 0.75s ease-in-out;
+  overflow: hidden;
+
+  &.expanded {
+    height: calc(12.5rem + 3rem * var(--login-button-count) + 0.75rem);
+  }
+
+  &.expanded_notoken{
+    height: calc(12.5rem + 3rem * var(--login-button-count) + 0.75rem);
+  }
+
+  &.expanded_merchant {
+    height: calc(12.5rem + 3rem * (var(--login-button-count) + 1) + 2.5rem + 0.75rem);
+  }
+}
+
+#profile {
+  transition: border-radius 0.5s ease-in-out, height 0.75s ease-in-out, width 0.75s ease-in-out, padding 0.75s ease-in-out;
+  border-radius: 1.75rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0.469rem;
+
+  &:hover {
+    border-radius: 1rem;
+    width: 25rem;
+    height: 12rem;
+    padding: 0.75rem;
+  }
+}
