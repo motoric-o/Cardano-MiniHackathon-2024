@@ -2,7 +2,10 @@
 
 ## Introduction
 
-Projek ini adalah projek **MiniHackathon Cardano 2024 Universitas Kristen Maranatha**, milik partisipan atas nama **Rico Dharmawan** atau kelompok **Logica**. Aplikasi sudah mencegah terajadinya bypass saat login dan sudah dilengkapi fitur untuk melakukan transaksi di mana merchant belum bisa menarik uang sampai pembeli mengkonfirmasi bahwa barangnya sudah sampai, namun pembeli pun tidak bisa mengkonfirmasi secara sembarangan maka dibuatlah token yang akan mereka dapat secara fisik bersama barang yang mereka pesan. Pembeli juga akan diberi waktu beberapa hari untuk memasukkan token tersebut setelah kurir memberi konfirmasi kepada server bahwa barang sudah diterima(Sistem konfirmasi barang sampai ke tujuan seperti tokopedia). Jika pembeli tidak mengkonfirmasi, merchant hanya bisa mencairkan setelah satu bulan.
+Projek: **MiniHackathon Cardano 2024 Universitas Kristen Maranatha**
+Owner: **Rico Dharmawan** / **Logica**
+
+Aplikasi sudah mencegah terajadinya bypass saat login dan sudah dilengkapi fitur untuk melakukan transaksi di mana merchant belum bisa menarik uang sampai pembeli mengkonfirmasi bahwa barangnya sudah sampai, namun pembeli pun tidak bisa mengkonfirmasi secara sembarangan maka dibuatlah token yang akan mereka dapat secara fisik bersama barang yang mereka pesan. Pembeli juga akan diberi waktu beberapa hari untuk memasukkan token tersebut setelah kurir memberi konfirmasi kepada server bahwa barang sudah diterima(Sistem konfirmasi barang sampai ke tujuan seperti tokopedia). Jika pembeli tidak mengkonfirmasi, merchant hanya bisa mencairkan setelah satu bulan.
 
 Aplikasi ini tidak hanya menggunakan file environment .env tetapi juga menggunakan file .json sebagai database sample untuk menyimpan data transaksi yang nanti bisa digantikan dengan database asli. Environment backend juga digunakan untuk projek aplikasi ini.
 
